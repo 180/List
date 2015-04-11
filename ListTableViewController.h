@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ListTableViewController.h
 //  List
 //
 //  Created by Maciej Stanik on 11/04/2015.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ListTableViewController : UITableViewController
 
 @end
-

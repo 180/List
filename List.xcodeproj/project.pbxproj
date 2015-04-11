@@ -10,11 +10,11 @@
 		4ECE365B1AD9A22100945395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE365A1AD9A22100945395 /* main.m */; };
 		4ECE365E1AD9A22100945395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE365D1AD9A22100945395 /* AppDelegate.m */; };
 		4ECE36611AD9A22100945395 /* List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE365F1AD9A22100945395 /* List.xcdatamodeld */; };
-		4ECE36641AD9A22100945395 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36631AD9A22100945395 /* ViewController.m */; };
-		4ECE36671AD9A22100945395 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE36651AD9A22100945395 /* Main.storyboard */; };
 		4ECE36691AD9A22100945395 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE36681AD9A22100945395 /* Images.xcassets */; };
 		4ECE366C1AD9A22100945395 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE366A1AD9A22100945395 /* LaunchScreen.xib */; };
 		4ECE36781AD9A22100945395 /* ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36771AD9A22100945395 /* ListTests.m */; };
+		4ECE36841AD9A4C400945395 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36821AD9A4C400945395 /* ListTableViewController.m */; };
+		4ECE36851AD9A4C400945395 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE36831AD9A4C400945395 /* ListTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +34,14 @@
 		4ECE365C1AD9A22100945395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4ECE365D1AD9A22100945395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4ECE36601AD9A22100945395 /* List.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = List.xcdatamodel; sourceTree = "<group>"; };
-		4ECE36621AD9A22100945395 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4ECE36631AD9A22100945395 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4ECE36661AD9A22100945395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ECE36681AD9A22100945395 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4ECE366B1AD9A22100945395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4ECE36711AD9A22100945395 /* ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ECE36761AD9A22100945395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ECE36771AD9A22100945395 /* ListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTests.m; sourceTree = "<group>"; };
+		4ECE36811AD9A4C400945395 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = SOURCE_ROOT; };
+		4ECE36821AD9A4C400945395 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = SOURCE_ROOT; };
+		4ECE36831AD9A4C400945395 /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +83,11 @@
 		4ECE36571AD9A22100945395 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				4ECE36811AD9A4C400945395 /* ListTableViewController.h */,
+				4ECE36821AD9A4C400945395 /* ListTableViewController.m */,
+				4ECE36831AD9A4C400945395 /* ListTableViewController.xib */,
 				4ECE365C1AD9A22100945395 /* AppDelegate.h */,
 				4ECE365D1AD9A22100945395 /* AppDelegate.m */,
-				4ECE36621AD9A22100945395 /* ViewController.h */,
-				4ECE36631AD9A22100945395 /* ViewController.m */,
-				4ECE36651AD9A22100945395 /* Main.storyboard */,
 				4ECE36681AD9A22100945395 /* Images.xcassets */,
 				4ECE366A1AD9A22100945395 /* LaunchScreen.xib */,
 				4ECE365F1AD9A22100945395 /* List.xcdatamodeld */,
@@ -202,9 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECE36671AD9A22100945395 /* Main.storyboard in Resources */,
 				4ECE366C1AD9A22100945395 /* LaunchScreen.xib in Resources */,
 				4ECE36691AD9A22100945395 /* Images.xcassets in Resources */,
+				4ECE36851AD9A4C400945395 /* ListTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +224,8 @@
 			files = (
 				4ECE365E1AD9A22100945395 /* AppDelegate.m in Sources */,
 				4ECE365B1AD9A22100945395 /* main.m in Sources */,
-				4ECE36641AD9A22100945395 /* ViewController.m in Sources */,
 				4ECE36611AD9A22100945395 /* List.xcdatamodeld in Sources */,
+				4ECE36841AD9A4C400945395 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,14 +248,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4ECE36651AD9A22100945395 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4ECE36661AD9A22100945395 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4ECE366A1AD9A22100945395 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +408,7 @@
 				4ECE367D1AD9A22100945395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4ECE367E1AD9A22100945395 /* Build configuration list for PBXNativeTarget "ListTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +417,7 @@
 				4ECE36801AD9A22100945395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
