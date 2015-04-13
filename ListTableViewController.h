@@ -10,4 +10,8 @@
 
 @interface ListTableViewController : UITableViewController
 
+- (IBAction)addButtonTapped:(UIBarButtonItem *)sender;
+
+@property (strong) NSMutableArray *items;
+
 @end

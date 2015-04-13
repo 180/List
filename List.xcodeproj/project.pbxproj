@@ -15,6 +15,7 @@
 		4ECE36781AD9A22100945395 /* ListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36771AD9A22100945395 /* ListTests.m */; };
 		4ECE36841AD9A4C400945395 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36821AD9A4C400945395 /* ListTableViewController.m */; };
 		4ECE36851AD9A4C400945395 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE36831AD9A4C400945395 /* ListTableViewController.xib */; };
+		4ECE36881AD9B93900945395 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36871AD9B93900945395 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		4ECE36811AD9A4C400945395 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = SOURCE_ROOT; };
 		4ECE36821AD9A4C400945395 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = SOURCE_ROOT; };
 		4ECE36831AD9A4C400945395 /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = SOURCE_ROOT; };
+		4ECE36861AD9B93900945395 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		4ECE36871AD9B93900945395 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				4ECE36681AD9A22100945395 /* Images.xcassets */,
 				4ECE366A1AD9A22100945395 /* LaunchScreen.xib */,
 				4ECE365F1AD9A22100945395 /* List.xcdatamodeld */,
+				4ECE36861AD9B93900945395 /* Item.h */,
+				4ECE36871AD9B93900945395 /* Item.m */,
 				4ECE36581AD9A22100945395 /* Supporting Files */,
 			);
 			path = List;
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECE36881AD9B93900945395 /* Item.m in Sources */,
 				4ECE365E1AD9A22100945395 /* AppDelegate.m in Sources */,
 				4ECE365B1AD9A22100945395 /* main.m in Sources */,
 				4ECE36611AD9A22100945395 /* List.xcdatamodeld in Sources */,
