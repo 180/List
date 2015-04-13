@@ -28,7 +28,7 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Table view data source
+#pragma mark - NSManagedObjectContext methods
 
 - (void)showData {
     _context = [self managedObjectContext];
@@ -48,6 +48,8 @@
     
     return context;
 }
+
+#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -81,6 +83,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [_context deleteObject:[_items objectAtIndex:indexPath.row]];
         [_items removeObjectAtIndex:indexPath.row];
+        
         NSError *saveError = nil;
         [_context save:&saveError];
         
@@ -89,7 +92,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-     Item *item = [_items objectAtIndex:indexPath.row];
+    Item *item = [_items objectAtIndex:indexPath.row];
     item.checked = !item.checked;
     
     NSError *saveError = nil;

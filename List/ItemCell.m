@@ -14,12 +14,6 @@
     [_checkImage setImage:[UIImage imageNamed:@"Empty"]];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
-}
-
 - (void)setChecked:(BOOL)checked {
     if (checked) {
         [_checkImage setImage:[UIImage imageNamed:@"Check"]];

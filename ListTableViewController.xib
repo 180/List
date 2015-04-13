@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <color key="separatorColor" red="0.21568629149999999" green="0.65098041299999998" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+            <color key="separatorColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
             <view key="tableHeaderView" contentMode="scaleToFill" id="867-T3-aLn">
                 <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -23,12 +23,12 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAk-In-HJ8">
                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xM-oF-4En">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <color key="backgroundColor" red="0.21568629149999999" green="0.65098041299999998" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <items>
                             <barButtonItem style="plain" systemItem="flexibleSpace" id="U3p-Hh-nDu"/>
                             <barButtonItem systemItem="add" id="LKo-rW-AAi">
@@ -38,10 +38,11 @@
                             </barButtonItem>
                         </items>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.21568629149999999" green="0.65098041299999998" blue="0.86274516580000005" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="0.78000000000000003" colorSpace="calibratedRGB"/>
+                <color key="tintColor" red="0.40000000000000002" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="6xM-oF-4En" secondAttribute="trailing" id="3d7-HU-Msr"/>
                     <constraint firstItem="6xM-oF-4En" firstAttribute="leading" secondItem="867-T3-aLn" secondAttribute="leading" id="KfL-st-l8V"/>
@@ -83,7 +84,7 @@
                 </variation>
             </view>
             <view key="tableFooterView" contentMode="scaleToFill" id="2yG-SD-XMh">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <rect key="frame" x="0.0" y="164" width="600" height="1"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             </view>
             <connections>
