@@ -16,6 +16,8 @@
 		4ECE36841AD9A4C400945395 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36821AD9A4C400945395 /* ListTableViewController.m */; };
 		4ECE36851AD9A4C400945395 /* ListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE36831AD9A4C400945395 /* ListTableViewController.xib */; };
 		4ECE36881AD9B93900945395 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36871AD9B93900945395 /* Item.m */; };
+		4ECE36961ADC01AB00945395 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECE36941ADC01AB00945395 /* ItemCell.m */; };
+		4ECE36971ADC01AB00945395 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ECE36951ADC01AB00945395 /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		4ECE36831AD9A4C400945395 /* ListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewController.xib; sourceTree = SOURCE_ROOT; };
 		4ECE36861AD9B93900945395 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		4ECE36871AD9B93900945395 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		4ECE36931ADC01AB00945395 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		4ECE36941ADC01AB00945395 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		4ECE36951ADC01AB00945395 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 			children = (
 				4ECE36811AD9A4C400945395 /* ListTableViewController.h */,
 				4ECE36821AD9A4C400945395 /* ListTableViewController.m */,
+				4ECE36931ADC01AB00945395 /* ItemCell.h */,
+				4ECE36941ADC01AB00945395 /* ItemCell.m */,
+				4ECE36951ADC01AB00945395 /* ItemCell.xib */,
 				4ECE36831AD9A4C400945395 /* ListTableViewController.xib */,
 				4ECE365C1AD9A22100945395 /* AppDelegate.h */,
 				4ECE365D1AD9A22100945395 /* AppDelegate.m */,
@@ -207,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECE36971ADC01AB00945395 /* ItemCell.xib in Resources */,
 				4ECE366C1AD9A22100945395 /* LaunchScreen.xib in Resources */,
 				4ECE36691AD9A22100945395 /* Images.xcassets in Resources */,
 				4ECE36851AD9A4C400945395 /* ListTableViewController.xib in Resources */,
@@ -227,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECE36961ADC01AB00945395 /* ItemCell.m in Sources */,
 				4ECE36881AD9B93900945395 /* Item.m in Sources */,
 				4ECE365E1AD9A22100945395 /* AppDelegate.m in Sources */,
 				4ECE365B1AD9A22100945395 /* main.m in Sources */,
@@ -345,9 +355,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = List/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = List;
 			};
 			name = Debug;
 		};
@@ -355,9 +366,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = List/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = List;
 			};
 			name = Release;
 		};
@@ -375,7 +387,7 @@
 				);
 				INFOPLIST_FILE = ListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ListTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/List.app/List";
 			};
 			name = Debug;
@@ -390,7 +402,7 @@
 				);
 				INFOPLIST_FILE = ListTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ListTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/List.app/List";
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 #import "ListTableViewController.h"
 #import "Item.h"
+#import "ItemCell.h"
 
 @interface ListTableViewController () {
     NSManagedObjectContext *_context;
@@ -57,15 +58,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"CellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    static NSString *cellId = @"ItemCell";
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellId owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     Item *item = [_items objectAtIndex:indexPath.row];
-    cell.textLabel.text = item.name;
+    cell.itemNameLabel.text = item.name;
+    [cell setChecked:item.checked];
     
     return cell;
 }
@@ -83,6 +86,17 @@
         
         [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+     Item *item = [_items objectAtIndex:indexPath.row];
+    item.checked = !item.checked;
+    
+    NSError *saveError = nil;
+    [_context save:&saveError];
+    
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
 }
 
 #pragma mark IBAction's

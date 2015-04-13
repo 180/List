@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-Eg-Ml0">
+                        <rect key="frame" x="8" y="20" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="37d-4m-1xP"/>
+                            <constraint firstAttribute="height" constant="20" id="TtD-tQ-qyk"/>
+                            <constraint firstAttribute="width" constant="20" id="V6p-E8-H9I"/>
+                            <constraint firstAttribute="width" constant="20" id="jFi-gP-bq4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TtD-tQ-qyk"/>
+                                <exclude reference="V6p-E8-H9I"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-8H-DWK">
+                        <rect key="frame" x="36" y="15" width="276" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="276" id="nhr-Cl-65K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="7" id="2TA-Dy-3vw"/>
+                    <constraint firstItem="HRF-Eg-Ml0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3Rz-8M-RJ9"/>
+                    <constraint firstItem="HRF-Eg-Ml0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="7MA-SK-Pko"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="I1s-eZ-Ixl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Wbw-8H-DWK" secondAttribute="bottom" constant="6.5" id="LQ9-S2-AxN"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="centerY" secondItem="HRF-Eg-Ml0" secondAttribute="centerY" id="WZV-9i-sNp"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="centerY" secondItem="HRF-Eg-Ml0" secondAttribute="centerY" id="YVt-tB-rGD"/>
+                    <constraint firstAttribute="centerY" secondItem="HRF-Eg-Ml0" secondAttribute="centerY" id="cG0-Cl-6JE"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="leading" secondItem="HRF-Eg-Ml0" secondAttribute="trailing" constant="8" symbolic="YES" id="egN-aM-JDm"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="lFt-6b-VKb"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="leading" secondItem="HRF-Eg-Ml0" secondAttribute="trailing" constant="8" symbolic="YES" id="vss-if-Nmx"/>
+                    <constraint firstItem="Wbw-8H-DWK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="xsg-C7-cHp"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="7MA-SK-Pko"/>
+                        <exclude reference="cG0-Cl-6JE"/>
+                        <exclude reference="YVt-tB-rGD"/>
+                        <exclude reference="lFt-6b-VKb"/>
+                        <exclude reference="vss-if-Nmx"/>
+                        <exclude reference="xsg-C7-cHp"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkImage" destination="HRF-Eg-Ml0" id="5I3-Gj-cio"/>
+                <outlet property="itemNameLabel" destination="Wbw-8H-DWK" id="j7W-uN-zte"/>
+            </connections>
+            <point key="canvasLocation" x="189" y="233"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Empty" width="20" height="19"/>
+    </resources>
+</document>
