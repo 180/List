@@ -10,17 +10,22 @@
 #import "Item.h"
 #import "ItemCell.h"
 
-@interface ListTableViewController () {
-    NSManagedObjectContext *_context;
-}
+NSString *const ListTableViewCellReuseIdentifier = @"ItemCell";
+
+@interface ListTableViewController ()
 
 @end
 
-@implementation ListTableViewController
+@implementation ListTableViewController {
+     NSManagedObjectContext *_context;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UINib *itemCellNib = [UINib nibWithNibName:NSStringFromClass([ItemCell class]) bundle:nil];
+    [self.tableView registerNib:itemCellNib forCellReuseIdentifier:ListTableViewCellReuseIdentifier];
+
     [self showData];
 }
 
@@ -60,15 +65,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"ItemCell";
-    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellId owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:ListTableViewCellReuseIdentifier forIndexPath:indexPath];
     Item *item = [_items objectAtIndex:indexPath.row];
+    
     cell.itemNameLabel.text = item.name;
     [cell setChecked:item.checked];
     
@@ -99,7 +98,6 @@
     [_context save:&saveError];
     
     [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    
 }
 
 #pragma mark IBAction's
